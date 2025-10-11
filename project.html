@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Projects — PSOWorldTV</title>
+<style>
+  :root{
+    --bg-start:#000000;
+    --bg-end:#111111;
+    --card-bg: rgba(255,255,255,0.03);
+    --glass-border: rgba(255,255,255,0.06);
+    --muted:#9b9b9b;
+    --accent:#52c18a;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Arial, sans-serif;
+    color:#e9eef0;
+    background: linear-gradient(180deg,var(--bg-start),var(--bg-end));
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:28px;
+  }
+
+  header{
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .title{
+    font-weight:900; /* SF Pro Display Black feel */
+    font-size:28px;
+    letter-spacing:0.4px;
+  }
+  .subtitle{ color:var(--muted); font-size:13px; margin-top:6px; }
+
+  .grid {
+    margin-top:28px;
+    width:100%;
+    max-width:1100px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:22px;
+  }
+
+  .card{
+    background: var(--card-bg);
+    border:1px solid var(--glass-border);
+    border-radius:14px;
+    padding:18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .card .row{ display:flex; gap:14px; align-items:center; }
+  .icon {
+    width:84px;
+    height:84px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.04);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-weight:800;
+    font-size:13px;
+    flex-shrink:0;
+  }
+
+  .card h3{ margin:0; font-size:18px; font-weight:900; } /* SF Pro Black feel */
+  .card p{ margin:0; color:var(--muted); font-size:14px; }
+
+  .card .action {
+    margin-top:8px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .btn {
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:transparent;
+    color:#e9eef0;
+    cursor:pointer;
+    font-weight:700;
+  }
+  .btn:active{ transform:translateY(1px); }
+
+  .coming-soon {
+    height:110px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    border:1px dashed rgba(255,255,255,0.03);
+    font-weight:700;
+  }
+
+  nav a { color:var(--muted); text-decoration:none; margin-right:12px; font-weight:600; }
+
+  footer{
+    margin-top:36px;
+    color:var(--muted);
+    font-size:12px;
+    text-align:center;
+  }
+
+  @media (max-width:520px){
+    .icon{ width:64px; height:64px; border-radius:12px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <div class="title">WHAT'S NEW</div>
+      <div class="subtitle">Latest projects from PSOWorldTV</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+    </nav>
+  </header>
+
+  <section class="grid" aria-label="Projects list">
+    <!-- Game 1: Eclatia -->
+    <article class="card" role="article">
+      <div class="row">
+        <div class="icon" aria-hidden="true">ICON</div>
+        <div style="flex:1">
+          <h3>Eclatia</h3>
+          <p style="margin-top:6px;">Action · Adventure</p>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:var(--muted)">Release</div>
+          <div style="font-weight:700">TBA</div>
+        </div>
+      </div>
+
+      <div style="margin-top:6px; color:var(--muted); font-size:13px;"><strong style="color:#fff;font-weight:900;">WHAT'S NEW</strong></div>
+
+      <div class="coming-soon">Game preview box</div>
+
+      <div class="action">
+        <div style="color:var(--muted); font-size:13px">Status: In Production (2026)</div>
+        <div>
+          <button class="btn" onclick="location.href='eclatia.html'">View</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Game 2: Coming Soon -->
+    <article class="card" role="article">
+      <div class="row">
+        <div class="icon" aria-hidden="true">ICON</div>
+        <div style="flex:1">
+          <h3>Game Project</h3>
+          <p style="margin-top:6px;">Coming Soon</p>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:var(--muted)">Status</div>
+          <div style="font-weight:700;color:var(--muted)">TBD</div>
+        </div>
+      </div>
+
+      <div style="margin-top:6px; color:var(--muted); font-size:13px;"><strong style="color:#fff;font-weight:900;">ANNOUNCEMENT</strong></div>
+
+      <div class="coming-soon">Coming Soon</div>
+
+      <div class="action">
+        <div style="color:var(--muted); font-size:13px">More projects are being developed</div>
+        <div>
+          <button class="btn" disabled style="opacity:.6; cursor:not-allowed;">Soon</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    © PSOWorldTV PRODUCTION - All Right Reserved 2025
+  </footer>
+</body>
+</html>
